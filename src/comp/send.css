@@ -1,0 +1,14 @@
+.send-body{
+  height: 35px;
+  width: 100%;
+  background-color: aqua;
+  position: fixed;
+  bottom: 3%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.send-body input{
+  width: 40%;
+}

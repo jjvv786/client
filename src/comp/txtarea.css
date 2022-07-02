@@ -1,0 +1,11 @@
+.text-area{
+  background-color: bisque;
+  height: 80vh; 
+}
+
+.texts{
+  background-color: aqua;
+  margin-left: 25%;
+  width: 50%;
+  height: inherit;
+}
