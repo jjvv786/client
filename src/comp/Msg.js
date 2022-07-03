@@ -4,7 +4,7 @@ const Msg=(props)=>{
   return(
     <>
       <div className="mess">
-        he {props.name} {props.mes}
+        {props.mes}
       </div>
     </>
   )
