@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const Send = ()=>{
 
-  const[me,setMe]=useState('v')
+  const[me,setMe]=useState('')
 
   const sendData=()=>{
     fetch('https://formx.herokuapp.com/message'
