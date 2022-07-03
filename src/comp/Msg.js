@@ -1,4 +1,4 @@
-import './msg.css'
+// import './msg.css'
 
 const Msg=(props)=>{
   return(

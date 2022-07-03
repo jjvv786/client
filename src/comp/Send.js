@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './send.css'
+// import './send.css'
 
 const Send = ()=>{
 

@@ -1,4 +1,4 @@
-import './txtarea.css'
+// import './txtarea.css'
 import Msg from './Msg'
 import { useState,useEffect } from 'react'
 
