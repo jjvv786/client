@@ -28,7 +28,7 @@ const TxtArea=()=>{
   }
 
   useEffect(()=>{
-    setTimeout( ()=>{ getData() }, 2000);
+    setTimeout( ()=>{ getData() }, 700);
   },)
 
   return(

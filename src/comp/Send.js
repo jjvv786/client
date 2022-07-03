@@ -3,6 +3,8 @@ import './send.css'
 
 const Send = ()=>{
 
+  const[me,setMe]=useState('v')
+
   const sendData=()=>{
     fetch('https://formx.herokuapp.com/message'
     ,{
@@ -11,10 +13,10 @@ const Send = ()=>{
         'Content-Type': 'application/json',
         'Accept': 'application/json'
        },
-       body:{
+       body:JSON.stringify({
         name:'new',
-        mes:'new'
-       }
+        mes:me
+       })
     }
     )
       .then(function(response){
@@ -26,10 +28,15 @@ const Send = ()=>{
       });
   }
 
+  const getMe = (e)=>{
+    setMe(e.target.value)
+    console.log(me)
+  }
+
   return(
     <>
       <div className="send-body">
-        <input type="text" />
+        <input type="text" name='mes' value={me} onChange={getMe}/>
         <button onClick={sendData}>Send</button>
       </div>
     </>
