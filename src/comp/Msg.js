@@ -1,10 +1,15 @@
-// import './msg.css'
+import './msg.css'
 
 const Msg=(props)=>{
   return(
     <>
       <div className="mess">
-        {props.mes}
+        <div className='mess-name'>
+          {props.name}
+        </div>
+        <div>
+          {props.mes}
+        </div>
       </div>
     </>
   )

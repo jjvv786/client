@@ -1,11 +1,13 @@
 import { useState } from 'react';
-// import './send.css'
+import './send.css'
 
 const Send = ()=>{
 
   const[me,setMe]=useState('')
+  const[name,setName]=useState('')
 
-  const sendData=()=>{
+  const sendData=(event)=>{
+    event.preventDefault();
     fetch('https://formx.herokuapp.com/message'
     ,{
       method:'POST',
@@ -26,6 +28,7 @@ const Send = ()=>{
       .then(function(myJson) {
         console.log(myJson);
       });
+    setMe('')
   }
 
   const getMe = (e)=>{
@@ -33,12 +36,17 @@ const Send = ()=>{
     console.log(me)
   }
 
+  const getName = (e)=>{
+    setName(e.target.value)
+  }
+
   return(
     <>
-      <div className="send-body">
-        <input type="text" name='mes' value={me} onChange={getMe}/>
+      <form className="send-body">
+        <input className='input-name' type="text" name='name' value={name} onChange={getName}/>
+        <input className='mes-input' type="text" name='mes' value={me} onChange={getMe}/>
         <button onClick={sendData}>Send</button>
-      </div>
+      </form>
     </>
   )
 }

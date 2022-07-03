@@ -1,4 +1,4 @@
-// import './txtarea.css'
+import './txtarea.css'
 import Msg from './Msg'
 import { useState,useEffect } from 'react'
 
@@ -33,7 +33,7 @@ const TxtArea=()=>{
 
   return(
     <>
-      <div className="text-area">
+      <div className="text-area" id='last'>
         <div className="texts">
           {
             data.map( (a)=>{
