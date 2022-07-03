@@ -16,7 +16,7 @@ const Send = ()=>{
         'Accept': 'application/json'
        },
        body:JSON.stringify({
-        name:'new',
+        name:name,
         mes:me
        })
     }
